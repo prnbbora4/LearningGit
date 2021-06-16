@@ -1,0 +1,275 @@
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git checkout 3c8beadb94dfeeeb6bb1c240bd5eada7d42a5f03
+Note: switching to '3c8beadb94dfeeeb6bb1c240bd5eada7d42a5f03'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 3c8bead initial commit
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit ((3c8bead...))
+$ git checkout master
+Previous HEAD position was 3c8bead initial commit
+Switched to branch 'master'
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git branch
+* master
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git log
+commit 019e00172c0dba946d3b745467085f11b1513b9e (HEAD -> master)
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 19:03:20 2021 +0530
+
+    initial commit 2
+
+commit abddece7f00bf88247b599c9addea9f65e2b0ac4
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 19:00:53 2021 +0530
+
+    initial commit 1
+
+commit 3c8beadb94dfeeeb6bb1c240bd5eada7d42a5f03
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 18:55:42 2021 +0530
+
+    initial commit
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git checkout 3c8beadb94dfeeeb6bb1c240bd5eada7d42a5f03
+Note: switching to '3c8beadb94dfeeeb6bb1c240bd5eada7d42a5f03'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 3c8bead initial commit
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit ((3c8bead...))
+$ git branch
+* (HEAD detached at 3c8bead)
+  master
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit ((3c8bead...))
+$ git log
+commit 3c8beadb94dfeeeb6bb1c240bd5eada7d42a5f03 (HEAD)
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 18:55:42 2021 +0530
+
+    initial commit
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit ((3c8bead...))
+$ git checkout master
+Previous HEAD position was 3c8bead initial commit
+Switched to branch 'master'
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git log
+commit 019e00172c0dba946d3b745467085f11b1513b9e (HEAD -> master)
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 19:03:20 2021 +0530
+
+    initial commit 2
+
+commit abddece7f00bf88247b599c9addea9f65e2b0ac4
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 19:00:53 2021 +0530
+
+    initial commit 1
+
+commit 3c8beadb94dfeeeb6bb1c240bd5eada7d42a5f03
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 18:55:42 2021 +0530
+
+    initial commit
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git branch dev
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git branch
+  dev
+* master
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git checkout dev
+Switched to branch 'dev'
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (dev)
+$ git checkout -b prnb/hijk
+Switched to a new branch 'prnb/hijk'
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (prnb/hijk)
+$ git status
+On branch prnb/hijk
+nothing to commit, working tree clean
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (prnb/hijk)
+$ git status
+On branch prnb/hijk
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hijk.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (prnb/hijk)
+$ git add hijk.txt
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (prnb/hijk)
+$ git commit -m "add hijk"
+[prnb/hijk 781280c] add hijk
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hijk.txt
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (prnb/hijk)
+$ git log
+commit 781280c5ecff48d4b775355ae6284014ea3fb1ff (HEAD -> prnb/hijk)
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 19:21:48 2021 +0530
+
+    add hijk
+
+commit 019e00172c0dba946d3b745467085f11b1513b9e (master, dev)
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 19:03:20 2021 +0530
+
+    initial commit 2
+
+commit abddece7f00bf88247b599c9addea9f65e2b0ac4
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 19:00:53 2021 +0530
+
+    initial commit 1
+
+commit 3c8beadb94dfeeeb6bb1c240bd5eada7d42a5f03
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 18:55:42 2021 +0530
+
+    initial commit
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (dev)
+$ git merge prnb/hijk
+Updating 019e001..781280c
+Fast-forward
+ hijk.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hijk.txt
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (dev)
+$ git status
+On branch dev
+nothing to commit, working tree clean
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (dev)
+$ git log
+commit 781280c5ecff48d4b775355ae6284014ea3fb1ff (HEAD -> dev, prnb/hijk)
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 19:21:48 2021 +0530
+
+    add hijk
+
+commit 019e00172c0dba946d3b745467085f11b1513b9e (master)
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 19:03:20 2021 +0530
+
+    initial commit 2
+
+commit abddece7f00bf88247b599c9addea9f65e2b0ac4
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 19:00:53 2021 +0530
+
+    initial commit 1
+
+commit 3c8beadb94dfeeeb6bb1c240bd5eada7d42a5f03
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 18:55:42 2021 +0530
+
+    initial commit
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (dev)
+$ git checkout master
+Switched to branch 'master'
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git merge dev
+Updating 019e001..781280c
+Fast-forward
+ hijk.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hijk.txt
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git log
+commit 781280c5ecff48d4b775355ae6284014ea3fb1ff (HEAD -> master, prnb/hijk, dev)
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 19:21:48 2021 +0530
+
+    add hijk
+
+commit 019e00172c0dba946d3b745467085f11b1513b9e
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 19:03:20 2021 +0530
+
+    initial commit 2
+
+commit abddece7f00bf88247b599c9addea9f65e2b0ac4
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 19:00:53 2021 +0530
+
+    initial commit 1
+
+commit 3c8beadb94dfeeeb6bb1c240bd5eada7d42a5f03
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 18:55:42 2021 +0530
+
+    initial commit
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        key.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+

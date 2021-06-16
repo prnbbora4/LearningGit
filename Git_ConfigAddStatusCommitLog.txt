@@ -1,0 +1,186 @@
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop
+$ git config --global user.name "Pranab Bora"
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop
+$ git config --global user.email "prnbbora4@gmail.com"
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop
+$ git config --global user.name
+Pranab Bora
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop
+$ git config --global user.email
+prnbbora4@gmail.com
+
+(Open config file in vi editor)
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop
+$ git config --global --edit
+hint: Waiting for your editor to close the file... error: cannot spawn emacs: No such file or directory
+error: unable to start editor 'emacs'
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop
+$ mkdir LearningGit
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop
+$ cd LearningGit
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit
+$ git init
+Initialized empty Git repository in C:/Users/prnbb/Desktop/LearningGit/.git/
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ ls
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ ls -a
+./  ../  .git/
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        abcd.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git add abcd.txt
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   abcd.txt
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git commit -m "initial commit"
+[master (root-commit) 3c8bead] initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 abcd.txt
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git log
+commit 3c8beadb94dfeeeb6bb1c240bd5eada7d42a5f03 (HEAD -> master)
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 18:55:42 2021 +0530
+
+    initial commit
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   abcd.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   abcd.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        efg.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git add efg.txt
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   efg.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   abcd.txt
+
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git commit -m "initial commit 1"
+[master abddece] initial commit 1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 efg.txt
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   abcd.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git log
+commit abddece7f00bf88247b599c9addea9f65e2b0ac4 (HEAD -> master)
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 19:00:53 2021 +0530
+
+    initial commit 1
+
+commit 3c8beadb94dfeeeb6bb1c240bd5eada7d42a5f03
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 18:55:42 2021 +0530
+
+    initial commit
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git add .
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   abcd.txt
+
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git commit -m "initial commit 2"
+[master 019e001] initial commit 2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+prnbb@LAPTOP-DEQ91DJ0 MINGW64 ~/Desktop/LearningGit (master)
+$ git log
+commit 019e00172c0dba946d3b745467085f11b1513b9e (HEAD -> master)
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 19:03:20 2021 +0530
+
+    initial commit 2
+
+commit abddece7f00bf88247b599c9addea9f65e2b0ac4
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 19:00:53 2021 +0530
+
+    initial commit 1
+
+commit 3c8beadb94dfeeeb6bb1c240bd5eada7d42a5f03
+Author: Pranab Bora <prnbbora4@gmail.com>
+Date:   Wed Jun 16 18:55:42 2021 +0530
+
+    initial commit
+
+
+
+
