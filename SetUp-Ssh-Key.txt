@@ -1,0 +1,10 @@
+1. Create the SSH keys, type 
+ssh-keygen -t rsa -C "your_email@example.com". 
+
+2.This will create both id_rsa and id_rsa.pub files.
+
+3.Add the id_rsa to ssh list on local computer, type 
+ssh-add ~/.ssh/id_rsa.
+
+4.We will get details something like this, type
+cat ~/.ssh/id_rsa.pub 
