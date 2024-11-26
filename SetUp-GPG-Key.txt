@@ -1,0 +1,12 @@
+1. Generate a GPG key parseInt, type
+gpg --full-generate-key
+
+
+2. list GPG details
+gpg --list-secret-keys --keyid-format=long
+
+
+3. Prints the GPG key ID, in ASCII armor format
+gpg --armor --export 3AA5C34371567BD2
+
+(Note: Install Gpg4win from "https://gpg4win.org/" for generate GPG key)
